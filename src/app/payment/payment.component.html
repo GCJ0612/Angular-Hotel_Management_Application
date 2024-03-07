@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments</title>
+</head>
+
+<body >
+    <div class="payments mt-2" >
+        <form (ngSubmit)="submit(name.value,email.value,city,checkIn,checkOut,noofmem,roomno,days,category,phone)">
+            <div class="forms">
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Name</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="name" #name
+                        name="name">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Email</label>
+                    <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="example@gmail.com"
+                        #email name="email">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput3">Phone no</label>
+                    <input type="tel" name="phone" class="form-control" id="formGroupExampleInput3"
+                        placeholder="+91-9945XXXX00" name="phone" #phone>
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput4">City</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput4" placeholder="city" name="city" #city>
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput5">Room Category</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput5" name="category"  #category="ngModel" [(ngModel)]="room1.Room">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput5">Room Price</label>
+                    <input type="number" class="form-control" name="rent" id="formGroupExampleInput6"  [(ngModel)]="room1.rent">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput6">Room No</label>
+                    <input type="number" class="form-control" name="roomno" id="formGroupExampleInput7" #roomno>
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput7">No of Members</label>
+                    <input type="number" class="form-control"  name="noofmem" id="formGroupExampleInput8" #noofmem>
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput8">Check In Date</label>
+                    <input type="datetime-local" class="form-control" name="checkIn" id="formGroupExampleInput9" #checkIn>
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput9">No of Days</label>
+                    <input type="number" class="form-control" name="days" id="formGroupExampleInput10" #days>
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput10">Check Out Date</label>
+                    <input type="datetime-local" class="form-control" name="checkOut" id="formGroupExampleInput11" #checkOut>
+                </div>
+                <!-- <a routerLink="bill" ><button type="submit">Submit</button></a> -->
+                <button type="submit" class="btn btn-outline-secondary">Make Payment</button>
+            </div>
+        </form>
+    </div>
+    <div>
+
+
+    </div>
+    <app-bill [name]="username" [email]="useremail" [city]="city" [checkIn]="checkIn" [checkOut]="checkOut" [category]="category" [roomno]="roomno" [noofmem]="noofmem" [days]="days" [rent]="room1.rent"
+    [Totalprice]="room1.rent" [GST]="room1.GST" [interestamount]="room1.interestamount" [advance]="room1.advance" [refund]="room1.refund"></app-bill>
+</body>
+
+</html>
+
+
+<router-outlet></router-outlet>

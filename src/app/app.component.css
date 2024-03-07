@@ -1,0 +1,30 @@
+/* html, body {
+  height: 100%;
+  margin: 0;
+} */
+
+/* body {
+  display: flex;
+  flex-direction: column;
+} */
+/* .content {
+  flex: 1;
+  This will push the footer to the bottom
+  margin-bottom: 60px; Adjust the value based on your footer's height
+} */
+footer {
+  margin: auto;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  bottom: -03;
+}
+nav{
+    background: rgba(0, 0, 0, 0.2);
+}
+/* .footer{
+  position:absolute;
+} */

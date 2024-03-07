@@ -1,0 +1,33 @@
+.display-4{
+    text-align: center;
+    margin: auto;
+    height: 15vh;
+}
+#carouselExampleFade{
+    margin: auto;
+    /* align-items: center; */
+    /* justify-content: center; */
+    width: 65%;
+}
+.container-fluid{
+    /* display: block; */
+    border: 1px solid;
+    /* margin: 10px; */
+    background-color: #99d668;
+    margin: auto;
+    width: 95%;
+    /* margin-block-start: 1%; */
+    margin-block: 1%;
+    text-align: justify;
+    width: 85%;
+
+}
+.about{
+ text-align: center;
+    margin: auto;
+    width: 100%;
+}
+.form-group{
+margin: auto;
+width: 15%;
+}

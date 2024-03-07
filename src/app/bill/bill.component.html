@@ -1,0 +1,84 @@
+<body>
+<table class="table table-striped table-dark" style="margin: auto; width:75%; margin-top: 2%;"> 
+    <thead>
+        <td colspan="2">
+            <h3 style="text-align: center;"> G's Stays </h3>
+            <p style="margin: auto;width: 35%; text-align: center;">Near Post Office,Opp. Ashlesha Guest House Kukke Subrahmanya-574238, D.K. Ph.:080257-281291</p>
+            <ul style="list-style: none;" >
+                <li style="display:flex;float: right;" name="date" id="datew"> Check In Date : <b>{{checkIn.value | date:'mediumDate' }}</b> </li>
+                <li nama="name">To. <b>{{name}}</b></li>
+                <li name="city"> City : <b>{{city.value}}</b></li>
+                <li name="room"> a) Room No : <b>{{roomno.value}}</b></li>
+                <li name="noofmem"> b) No of Members : <b>{{noofmem.value}}</b></li>
+                <li name="checkIn"> c) Time : <b>{{checkIn.value | date:'hh:mm a'}}</b></li>
+                <li name="days"> d) No of Days : <b>{{days.value}}</b></li>
+                <li name="days"> d) Check Out : <b>{{checkOut.value | date:'mediumDate'}}</b></li>
+            </ul>
+        </td>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="col">Particulars</th>
+            <th scope="col">Amount</th>
+        </tr>
+        <tr>
+            <td>Room Category</td>
+            <td>{{category.value}}</td>
+        </tr>
+        <tr>
+            <td>Room Rent</td>
+            <td>{{rent}}</td>
+        </tr>
+        <tr>
+            <td>GST</td>
+            <td>{{GST}}</td>
+        </tr>
+        <tr>
+            <th>Total:</th>
+            <th>{{Totalprice}}</th>
+        </tr>
+        <tr>
+            <th>Advance:</th>
+            <th>{{advance}}</th>
+        </tr>
+        <tr>
+            <th>Refund:</th>
+            <th>{{refund}}</th>
+        </tr>
+        <tr>
+            <th>Pilgrims <sub>signature</sub></th>
+            <th>Manager <sub>signature</sub></th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <ul>
+                    <li>Check out time 24 hrs.</li>
+                    <li>Hot water timings 24 hrs.</li>
+                    <li>Visitors are strictly not allowed inside the room.</li>
+                    <li>No room service.</li>
+                    <li>Kindly do not leave your valuables unattended.</li>
+                    <li>You are solely responsible for your valuables.</li>
+                    <li>No cancellation after billing and cash will not be refunded.</li>
+                    <li>Liquor is strictly prohibited.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <li style="text-align: center; list-style: none;">For advance booking kindly remit amount to following
+                    bank account viz.</li>
+                <ul style="list-style: none; ">
+                    <li>Name: <b>V Sadana Lodge</b></li>
+                    <li>Bank: <b>Indian Overseas Bank</b></li>
+                    <li>Branch: <b>Kukke Subrahmanya</b></li>
+                    <li>A/C. No: <b>018 502 000 000 579</b></li>
+                    <li>A/C Type: <b> CC</b> </li>
+                    <li>IFSC Code:<b> IOВА 0000 185</b></li>
+                </ul>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+</body>
+<router-outlet></router-outlet>

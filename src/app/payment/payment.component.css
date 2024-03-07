@@ -1,0 +1,11 @@
+.payments{
+    margin: auto;
+    width: 45%;
+    border: 2px black solid;
+    border-width: thin;
+}
+.forms{
+    padding: 50px;
+    /* margin: auto; */
+    /* width: 78%; */
+}

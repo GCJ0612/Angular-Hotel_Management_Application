@@ -1,0 +1,22 @@
+.table{
+    text-align:center;
+}
+.rooms{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-inline-start: 80px;
+    margin-inline-end: 30px;
+    margin-block-end: 30px;
+   column-gap: 20px;
+   row-gap: 50px;
+}
+.rooms .card img{
+    height:190px;
+}
+.card-body .card-text {
+    text-align: center;
+}
+.card a{
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,41 @@
+<h2>{{enquiry.value|json}}</h2>
+<form (ngSubmit)="submitDetails(uname,email,num,gender,item,mode)" #enquiry="ngForm">
+    <div class="form-group">
+        <input type="text" class="form-control is-invalid"   [class.is-invalid]="uname.invalid && uname.touched" required name="name" [(ngModel)]="enquiry1.name"
+            #uname="ngModel" placeholder="username" id="">
+            <small [class.d-none]="uname.valid || uname.untouched">[*name field is required]</small>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control is-invalid" #email="ngModel" [class.is-invalid]="email.invalid && email.touched" required name="email" placeholder="email" [(ngModel)]="enquiry1.email" id="" >
+        <small [class.d-none]="email.valid || email.untouched">[*email field is required]</small>
+    
+    </div>
+    <div class="form-group">
+        <input type="tel"  name="num" pattern=[0-9]{3}-[0-9]{3}-[0-9]{4} [(ngModel)]="enquiry1.num"
+            placeholder="phone number" class="form-control is-invalid" #num="ngModel"  [class.is-invalid]="num.invalid && num.touched" required >
+            <small [class.d-none]="num.valid || num.untouched">[*email field is required]</small>
+    </div>
+    <div class="form-group"><label for="">select Gender</label>
+        <select name="gender" id="" #gender="ngModel" [class.is-invalid]="gender.invalid && gender.touched" required [(ngModel)]="enquiry1.gender" class="form-control is-invalid">
+            <option value="">--select--</option>
+            <option *ngFor="let g of Genders" >{{g}}</option>
+           </select>
+        <small [class.d-none]="gender.valid || gender.untouched">[*gender field is required]</small>
+    </div>
+    <div class="form-group"><label for="">select Item</label>
+        <select name="item" id="" #item="ngModel" [class.is-invalid]="item.invalid && item.touched" required [(ngModel)]="enquiry1.item" class="form-control is-invalid">
+            <option value="">--select--</option>
+            <option *ngFor="let item of Items" >{{item}}</option>
+        </select>
+        <small [class.d-none]="item.valid || item.untouched">[*item field is required]</small>
+    </div>
+    <div class="form-group"><label>select mode of delivery</label>
+        <select name="mode" id="" #mode="ngModel" [class.is-invalid]="mode.invalid && mode.touched" required [(ngModel)]="enquiry1.mode" class="form-control is-invalid">
+            <option value="">--select--</option>
+            <option *ngFor="let mode of Modes" >{{mode}}</option>
+        </select>
+        <small [class.d-none]="mode.valid || mode.untouched">[*mode field is required]</small>
+        
+    </div>
+    <input type="submit" name="" id="" value="Submit" >
+</form>

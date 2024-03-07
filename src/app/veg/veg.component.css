@@ -1,0 +1,24 @@
+.menu{
+    display: grid;
+    margin: auto;
+    /* width: 100%; */
+    grid-template-columns: repeat(4,1fr);
+    margin-inline-start: 120px;
+    margin-inline-end: 0px;
+    margin-block-start: 10px; 
+    margin-block-end: 30px; 
+   column-gap: 40px;
+   row-gap: 40px;
+   /* padding-bottom: 30px; */
+   position: fixed;
+}
+.menu .card img{
+    height:190px;
+}
+.card-body .card-text {
+    text-align: center;
+}
+.card a{
+    text-decoration: none;
+    color: black;
+}

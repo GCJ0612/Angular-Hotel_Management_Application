@@ -1,0 +1,15 @@
+<h2>{{registrationForm.value|json}}</h2>
+<form action="" (ngSubmit)="validateDetails(name,email,pwd)" [formGroup]="registrationForm" class="form-group">
+<div class="form-group">
+    <input type="text" formControlName="username" #name name="name" placeholder="Name" class="form-control">
+</div>
+<div class="form-group">
+    <input type="email" formControlName="email" #email name="email"  placeholder="email" class="form-control">
+</div>
+<div class="form-group">    
+    <input type="password" formControlName="password" #pwd name="pwd" placeholder="passsword" class="form-control">
+</div>
+<div class="form-group"></div>
+<button type="submit">register</button>
+</form>
+<h2 id="demo"></h2>
